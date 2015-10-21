@@ -1,7 +1,18 @@
+" Vim - Plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'Valloric/YouCompleteMe'	
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/syntastic'
+Plug 'morhetz/gruvbox'
+
+" Add plugins to &runtimepath
+call plug#end()
+
 " Sets
 set number
 set ruler
-"set t_Co=256
 set nocompatible
 set encoding=utf-8
 set scrolloff=12
@@ -12,24 +23,18 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
+set noerrorbells
+set cursorline
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
 set undofile
+"set relativenumber
+colorscheme gruvbox
+set guifont=Fira\ Mono:h12 
+set background=dark
 syntax on
-colorscheme codeschool
 
-" Vim - Plug
-call plug#begin('~/.vim/plugged')
-
-Plug 'Valloric/YouCompleteMe'	
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/syntastic'
-Plug 'antlypls/vim-colors-codeschool'
-
-" Add plugins to &runtimepath
-call plug#end()
 
 " Ctrl-P
 " Always open file in new tab
