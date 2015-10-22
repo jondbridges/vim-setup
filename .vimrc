@@ -52,7 +52,7 @@ map <S-Enter> O<ESC>
 nnoremap <Leader>s :w<CR>
 nnoremap <Leader>a :wa<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>vs :vsplit<CR>
+nnoremap <Leader>vs :vsplit<CR><C-W><w>:q<CR><C-W><w>
 nnoremap <Leader>z <C-W><w>
 nnoremap <Leader>b gT
 nnoremap <Leader>n gt
