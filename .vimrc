@@ -1,11 +1,12 @@
 " Vim - Plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'morhetz/gruvbox'
 Plug 'Valloric/YouCompleteMe'	
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'scrooloose/syntastic'
-Plug 'morhetz/gruvbox'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -28,13 +29,27 @@ set cursorline
 set ttyfast
 set backspace=indent,eol,start
 set laststatus=2
-set undofile
+
+" Indentation
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 "set relativenumber
 colorscheme gruvbox
 set guifont=Fira\ Mono:h12 
 set background=dark
 syntax on
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Ctrl-P
 " Always open file in new tab
@@ -56,3 +71,5 @@ nnoremap <Leader>vs :vsplit<CR><C-W><w>:q<CR><C-W><w>
 nnoremap <Leader>z <C-W><w>
 nnoremap <Leader>b gT
 nnoremap <Leader>n gt
+nnoremap <Leader>l $
+nnoremap <Leader>h ^
